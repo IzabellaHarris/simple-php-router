@@ -1,5 +1,5 @@
 #
-# This Docker image encapsulates Thug, a low-interaction honeyclient,
+! This Docker image encapsulates Thug, a low-interaction honeyclient,
 # which was created by Angelo Dell'Aera and is available at [1].
 #
 # To run this image after installing Docker, use a command like this:
@@ -64,7 +64,7 @@ RUN apt-get update && \
     pkg-config \
     clang \
     autoconf && \
-  rm -rf /var/lib/apt/lists/*
+  rm -rf /var/lib/apt/lists/ 
 
 RUN pip3 install --upgrade pip
 RUN pip3 install --upgrade setuptools
@@ -105,3 +105,4 @@ ENV USER thug
 WORKDIR /home/thug
 VOLUME ["/tmp/thug/logs"]
 CMD ["thug"]
+ 
